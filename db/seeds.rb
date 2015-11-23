@@ -8,3 +8,5 @@
 
 community_category = Category.where(name: 'community').first_or_create(name: 'community')
 housing_category = Category.where(name: 'housing').first_or_create(name: 'housing')
+
+Subcategory.where(name: 'activities', category_id: community_category.id).first_or_create.(name: 'activities', category_id: community_category.id)
