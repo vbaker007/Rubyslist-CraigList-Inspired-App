@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 community_category = Category.where(name: 'community').first_or_create(name: 'community')
+housing_category = Category.where(name: 'housing').first_or_create(name: 'housing')
