@@ -12,9 +12,8 @@ forsale_category = Category.where(name: 'for sale').first_or_create(name: 'for s
 gigs_category = Category.where(name: 'gigs').first_or_create(name: 'gigs')
 personals_category = Category.where(name: 'personals').first_or_create(name: 'personals')
 services_category = Category.where(name: 'services').first_or_create(name: 'services')
-resumes_category = Category.where(name: 'resumes').first_or_create(name: 'resumes')
 discussionforums_category = Category.where(name: 'discussion forum').first_or_create(name: 'discussion forum')
-
+resumes_category = Category.where(name: 'resumes').first_or_create(name: 'resumes')
 
 Subcategory.where(name: 'activities', category_id: community_category.id).first_or_create(name: 'activities', category_id: community_category.id)
 Subcategory.where(name: 'classes', category_id: community_category.id).first_or_create(name: 'classes', category_id: community_category.id)
@@ -81,6 +80,15 @@ Subcategory.where(name: 'labor', category_id: gigs_category.id).first_or_create(
 Subcategory.where(name: 'talent', category_id: gigs_category.id).first_or_create(name: 'talent', category_id: gigs_category.id)
 Subcategory.where(name: 'writing', category_id: gigs_category.id).first_or_create(name: 'writing', category_id: gigs_category.id)
 
+Subcategory.where(name: 'strictly platonic', category_id: personals_category.id).first_or_create(name: 'strictly platonic', category_id: personals_category.id)
+Subcategory.where(name: 'women seeking women', category_id: personals_category.id).first_or_create(name: 'women seeking women', category_id: personals_category.id)
+Subcategory.where(name: 'women seeking men', category_id: personals_category.id).first_or_create(name: 'women seeking men', category_id: personals_category.id)
+Subcategory.where(name: 'men seeking women', category_id: personals_category.id).first_or_create(name: 'men seeking women', category_id: personals_category.id)
+Subcategory.where(name: 'men seeking men', category_id: personals_category.id).first_or_create(name: 'men seeking men', category_id: personals_category.id)
+Subcategory.where(name: 'misc romance', category_id: personals_category.id).first_or_create(name: 'misc romance', category_id: personals_category.id)
+Subcategory.where(name: 'casual encounters', category_id: personals_category.id).first_or_create(name: 'casual encounters', category_id: personals_category.id)
+Subcategory.where(name: 'missed connections', category_id: personals_category.id).first_or_create(name: 'missed connections', category_id: personals_category.id)
+Subcategory.where(name: 'rants and raves', category_id: personals_category.id).first_or_create(name: 'rants and raves', category_id: personals_category.id)
 
 
 
