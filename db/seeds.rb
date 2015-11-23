@@ -13,6 +13,7 @@ gigs_category = Category.where(name: 'gigs').first_or_create(name: 'gigs')
 personals_category = Category.where(name: 'personals').first_or_create(name: 'personals')
 services_category = Category.where(name: 'services').first_or_create(name: 'services')
 resumes_category = Category.where(name: 'resumes').first_or_create(name: 'resumes')
+discussionforums_category = Category.where(name: 'discussion forum').first_or_create(name: 'discussion forum')
 
 
 Subcategory.where(name: 'activities', category_id: community_category.id).first_or_create(name: 'activities', category_id: community_category.id)
