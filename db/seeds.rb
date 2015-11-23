@@ -72,4 +72,15 @@ Subcategory.where(name: 'toys+games', category_id: forsale_category.id).first_or
 Subcategory.where(name: 'video gaming', category_id: forsale_category.id).first_or_create(name: 'video gaming', category_id: forsale_category.id)
 Subcategory.where(name: 'wanted', category_id: forsale_category.id).first_or_create(name: 'wanted', category_id: forsale_category.id)
 
+Subcategory.where(name: 'computer', category_id: gigs_category.id).first_or_create(name: 'computer', category_id: gigs_category.id)
+Subcategory.where(name: 'creative', category_id: gigs_category.id).first_or_create(name: 'creative', category_id: gigs_category.id)
+Subcategory.where(name: 'crew', category_id: gigs_category.id).first_or_create(name: 'crew', category_id: gigs_category.id)
+Subcategory.where(name: 'domestic', category_id: gigs_category.id).first_or_create(name: 'domestic', category_id: gigs_category.id)
+Subcategory.where(name: 'event', category_id: gigs_category.id).first_or_create(name: 'event', category_id: gigs_category.id)
+Subcategory.where(name: 'labor', category_id: gigs_category.id).first_or_create(name: 'labor', category_id: gigs_category.id)
+Subcategory.where(name: 'talent', category_id: gigs_category.id).first_or_create(name: 'talent', category_id: gigs_category.id)
+Subcategory.where(name: 'writing', category_id: gigs_category.id).first_or_create(name: 'writing', category_id: gigs_category.id)
+
+
+
 
