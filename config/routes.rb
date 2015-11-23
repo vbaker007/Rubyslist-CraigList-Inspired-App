@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :categories
-  resources :subcategories
+  resources :categories do 
+    resources :subcategories
+  end
+  
   resources :listings
 
   root 'categories#index'
