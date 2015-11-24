@@ -8,9 +8,9 @@ class CategoriesController < ApplicationController
       @gigs = @categories[3]
       @personals = @categories[4]
       @services = @categories[5]
-      @jobs = @categories[6]
+      @jobs = @categories[8]
       @discussionforums = @categories[7]
-      @resumes = @categories[8]
+      #@resumes = @categories[]
     end
 
     def show
