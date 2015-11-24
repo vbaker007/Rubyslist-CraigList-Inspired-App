@@ -12,6 +12,7 @@ forsale_category = Category.where(name: 'for sale').first_or_create(name: 'for s
 gigs_category = Category.where(name: 'gigs').first_or_create(name: 'gigs')
 personals_category = Category.where(name: 'personals').first_or_create(name: 'personals')
 services_category = Category.where(name: 'services').first_or_create(name: 'services')
+jobs_category = Category.where(name: 'jobs').first_or_create(name: 'jobs')
 discussionforums_category = Category.where(name: 'discussion forum').first_or_create(name: 'discussion forum')
 resumes_category = Category.where(name: 'resumes').first_or_create(name: 'resumes')
 
