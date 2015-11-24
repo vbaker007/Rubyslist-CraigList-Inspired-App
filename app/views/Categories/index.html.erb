@@ -25,7 +25,7 @@
     <div class="center-one">
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'community' %></th>
+          <th class="table-header"><%= link_to 'community', category_path(@community) %></th>
         </tr>
         <tr>
           <td>
@@ -41,40 +41,32 @@
       </table>
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'personals' %></th>
+          <th class="table-header"><%= link_to 'personals', category_path(@personals) %></th>
         </tr>
         <tr>
           <td>
+            <% @personals.subcategories.each do |subcategory| %>
             <ul>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li><%= link_to subcategory.name %></li>
+              
             </ul>
+          <% end %>
           </td>
         </tr>
       </table>
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'services' %></th>
+          <th class="table-header"><%= link_to 'services', category_path(@services) %></th>
         </tr>
         <tr>
           <td>
-            <ul class="left-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+            <% @services.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name %></li>
+              
             </ul>
-            <ul class="right-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-            </ul>
+            <% end %>
+        
           </td>
         </tr>
       </table>
@@ -82,59 +74,31 @@
     <div class="center-two">
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'housing' %></th>
+          <th class="table-header"><%= link_to 'housing', category_path(@housing) %></th>
         </tr>
         <tr>
           <td>
+            <% @housing.subcategories.each do |subcategory| %>
             <ul>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li><%= link_to subcategory.name %></li>
+              
             </ul>
+            <% end %>
           </td>
         </tr>
       </table>
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'for sale' %></th>
+          <th class="table-header"><%= link_to 'for sale', category_path(@forsale) %></th>
         </tr>
         <tr>
           <td>
-            <ul class="left-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+            <% @forsale.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name %></li>
+              
             </ul>
-            <ul class="right-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-            </ul>
+            <% end %>
           </td>
         </tr>
       </table>
@@ -142,37 +106,15 @@
     <div class="center-three">
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'jobs' %></th>
+          <th class="table-header"><%= link_to 'jobs', category_path(@jobs) %></th>
         </tr>
         <tr>
           <td>
+            <% @jobs.subcategories.each do |subcategory| %>
             <ul>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li><%= link_to subcategory.name %></li>
             </ul>
+            <% end %>
           </td>
         </tr>
       </table>

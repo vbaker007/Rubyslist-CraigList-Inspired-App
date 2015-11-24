@@ -12,5 +12,10 @@ class CategoriesController < ApplicationController
       @discussionforums = @categories[7]
       @resumes = @categories[8]
     end
+
+    def show
+      @category = Subcategory.find(params[:id])
+    end
+
   
 end
