@@ -19,6 +19,10 @@ resumes_category = Category.where(name: 'resumes').first_or_create(name: 'resume
 Subcategory.where(name: 'activities', category_id: community_category.id).first_or_create(name: 'activities', category_id: community_category.id)
 Subcategory.where(name: 'classes', category_id: community_category.id).first_or_create(name: 'classes', category_id: community_category.id)
 Subcategory.where(name: 'events', category_id: community_category.id).first_or_create(name: 'events', category_id: community_category.id)
+Subcategory.where(name: 'musicians', category_id: community_category.id).first_or_create(name: 'musicians', category_id: community_category.id)
+Subcategory.where(name: 'news', category_id: community_category.id).first_or_create(name: 'news', category_id: community_category.id)
+Subcategory.where(name: 'general', category_id: community_category.id).first_or_create(name: 'general', category_id: community_category.id)
+Subcategory.where(name: 'pets', category_id: community_category.id).first_or_create(name: 'pets', category_id: community_category.id)
 
 Subcategory.where(name: 'apts/housing for rent', category_id: housing_category.id).first_or_create(name: 'apts/housing for rent', category_id: housing_category.id)
 Subcategory.where(name: 'apts wanted', category_id: housing_category.id).first_or_create(name: 'apts wanted', category_id: housing_category.id)
