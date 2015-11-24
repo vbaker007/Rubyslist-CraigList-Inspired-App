@@ -31,7 +31,7 @@
           <td>
             <% @community.subcategories.each do |subcategory| %>
             <ul class="left-list">
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@community, subcategory) %></li>
               
             </ul>
             <% end %>
@@ -47,7 +47,7 @@
           <td>
             <% @personals.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@community, subcategory) %></li>
               
             </ul>
           <% end %>
@@ -62,7 +62,7 @@
           <td>
             <% @services.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@community, subcategory) %></li>
               
             </ul>
             <% end %>
@@ -80,7 +80,7 @@
           <td>
             <% @housing.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@community, subcategory) %></li>
               
             </ul>
             <% end %>
@@ -95,7 +95,7 @@
           <td>
             <% @forsale.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@community, subcategory) %></li>
               
             </ul>
             <% end %>
@@ -112,7 +112,7 @@
           <td>
             <% @jobs.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@community, subcategory) %></li>
             </ul>
             <% end %>
           </td>
