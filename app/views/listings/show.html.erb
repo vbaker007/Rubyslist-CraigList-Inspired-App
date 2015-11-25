@@ -1,21 +1,23 @@
 <div class="topbar">
   <div class="container">
     <div class="vertical-center">
-      rubyslist > jobs > accounting
+      <%= link_to 'rubyslist', root_path %> > jobs > accounting
     </div>
   </div>
 </div>
 <div class="container">
   <div>
     <button type="button">reply</button>
-    posted 2 days ago
+    posted <%= time_ago_in_words(@listing.created_at) %>
     <h1 class="listing-header"><%= @listing.title %></h1>
     <div class="box">
       <p><%= @listing.description %></p>
 
     </div>
+     <p><%= @listing.city %></p>
+      <p><%= @listing.state %></p>
+      <p><%= @listing.zipcode %></p>
     
-    test
   </div>
   <footer>
     <p>post id: <%= @listing.id %></p>
