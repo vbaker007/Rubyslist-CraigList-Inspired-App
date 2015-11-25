@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   end
   
   resources :listings
+    collection do
+      get 'search'
+    end
+  end
 
   root 'categories#index'
 
