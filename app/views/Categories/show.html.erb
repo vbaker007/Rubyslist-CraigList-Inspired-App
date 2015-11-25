@@ -13,6 +13,7 @@
      <div class="lowest-price">lowest-price</div>
    </div>
   <ul class="list-margin">
+    <% if @listings.present? %>
     <% @listings.each do |listing| %>
     <li>
       <span>
@@ -20,6 +21,9 @@
       </span>
         <%= link_to listing.title, listing %> - (<%= listing.city %>, <%= listing.state %>)
     </li>
+    <% end %>
+    <% else %>
+      <p>No Listings Found!</>
     <% end %>
   </ul>
 </div>
