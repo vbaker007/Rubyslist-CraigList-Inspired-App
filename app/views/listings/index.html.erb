@@ -1,0 +1,9 @@
+<h1> Listings </h1>
+<% @listings.each do |listing| %>
+  <h2><%= listing.title %></h2>
+  <h3><%= listing.description %></h3>
+  <p><%= listing.city %></p>
+  <p><%= listing.state %></p>
+  <p><%= listing.zipcode %></p>
+  <%= link_to 'Show listing', listing_path(listing) %>
+<% end %>
