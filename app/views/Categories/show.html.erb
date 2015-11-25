@@ -14,7 +14,12 @@
    </div>
   <ul class="list-margin">
     <% @listings.each do |listing| %>
-    
+    <li>
+      <span>
+        <%= listing.created_at %>
+      </span>
+        <%= listing.title %> (<%= listing.city %>, <%= listing.state %>)
+    </li>
     <% end %>
   </ul>
 </div>
