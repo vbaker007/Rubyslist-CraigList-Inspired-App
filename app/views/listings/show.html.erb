@@ -12,13 +12,14 @@
     <h1 class="listing-header"><%= @listing.title %></h1>
     <div class="box">
       <p><%= @listing.description %></p>
+
     </div>
     
     test
   </div>
   <footer>
-    <p>post id</p>
-    <p>posted 2 days ago</p>
+    <p>post id: <%= @listing.id %></p>
+    <p>posted <%= @listing.created_at %></p>
     <%= link_to 'Back', listings_path %>
   </footer>
 </div>
