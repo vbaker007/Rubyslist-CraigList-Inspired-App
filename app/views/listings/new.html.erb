@@ -1,3 +1,35 @@
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag  'application', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'listings.rb' %>
+<script src="listings.js"></script>
+<script>
+   $(document).ready(function(){
+  var getSubcategories = function(category_id){
+    var $subcategories = $('#listing_subcategory_id');
+    $($subcategories).empty();
+    
+    $.post('/subcategories/find_by_category', { category_id: category_id }, function(data){
+      $.each(data.subcategories, function(index, subcategory){
+        var option = $('<option />');
+        option.attr('value', subcategory.id);
+        option.text(subcategory.name);
+        option.appendTo($subcategories);
+      });
+    })
+  };
+  
+  var getSelectedCategory = function(){
+    return $('#listing_category_id').val();
+  };
+  
+  $('#listing_category_id').change(function(){
+    var category_id = getSelectedCategory();
+    getSubcategories(category_id);
+  });
+  
+  getSubcategories(getSelectedCategory());
+});
+</script>
 <div class="topbar">
   <div class="container">
     <div class="vertical-center">
@@ -18,7 +50,7 @@
       </p>
       <p>  
         <%= f.label :subcategory_id %>
-        <%= f.select :subcategory_id, Subcategory.all.map { |f| [f.name, f.id]} %>
+        <%= f.select :subcategory_id, options_for_select([]) %>
       </p>
       <%= f.label :city %>
       <%= f.text_field :city %>
