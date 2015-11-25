@@ -19,7 +19,7 @@
   </div>
   <footer>
     <p>post id: <%= @listing.id %></p>
-    <p>posted <%= @listing.created_at %></p>
+    <p>posted <%= time_ago_in_words(@listing.created_at) %></p>
     <%= link_to 'Back', listings_path %>
   </footer>
 </div>
