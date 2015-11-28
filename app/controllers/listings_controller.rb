@@ -16,11 +16,11 @@ class ListingsController < ApplicationController
   end
 
   def search
-    @listing = Listing.search(params)
+    @listings = Listing.search(params)
   end
 
   def show
-    @listing = Listing.find(params[:id])
+    @listings = Listing.find(params[:id])
   end
   private
 
