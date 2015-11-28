@@ -2,7 +2,7 @@
   <div class="leftbar">
     <a href="#"><h1>rubyslist</h1></a>
     <ul>
-      <a href="#"><%= link_to 'posts to classifieds', new_listing_path %></a>
+      <li><a href="#"><%= link_to 'posts to classifieds', new_listing_path %></a></li>
       <% if user_signed_in? %>
       <li><%= link_to 'my account', edit_user_registration_path %></li>
       <li><%= link_to 'log out', destroy_user_session_path, method: :delete %></li>
