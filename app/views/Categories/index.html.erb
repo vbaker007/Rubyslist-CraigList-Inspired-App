@@ -8,11 +8,11 @@
     
    
       <%= form_tag search_listings_path, method: :get do |f| %>
-      <p>search rubyslist</p>
-      <%= text_field_tag :search, nil, placeholder: 'search' %>
-      <%= text_field_tag :location, nil, placeholder: 'near' %>
-      <%= select_tag :category, options_for_select(Category.all.map{|c|[c.name, c.id]}) %>
-      <%= submit_tag '>' %>
+        <p>search rubyslist</p>
+        <%= text_field_tag :search, nil, placeholder: 'search' %>
+        <%= text_field_tag :location, nil, placeholder: 'near' %>
+        <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
+        <%= submit_tag '>' %>
       <% end %>
  
     
