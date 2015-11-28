@@ -15,6 +15,10 @@ class ListingsController < ApplicationController
     end
   end
 
+  def search
+    @listing = Listing.search(params)
+  end
+
   def show
     @listing = Listing.find(params[:id])
   end
