@@ -1,5 +1,7 @@
 class ListingsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create]
+  before_filter :is_user?, only: [:edit, :update, :delete]
+  
   def index
     @listings = Listing.all
   end
@@ -9,9 +11,13 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
-    @listing.user = current_user
-    @listing.save
-    redirect_to @listing
+    if  @listing.save
+        @listing.user = current_user
+        redirect_to @listing
+    else
+        flash[:danger] = @listing.errors.full_messages.to_sentence
+        render 'new'
+    end
   end
 
   def search
@@ -40,6 +46,12 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @listing.destroy
     redirect_to root_path
+  end
+
+  def is_user?
+    @listing = Listing.find(params[:id])
+    unless current_user = @listing.user
+      redirect_to root_path, alert: "Sorry, you are not the author of this listing."
   end
 
   private
