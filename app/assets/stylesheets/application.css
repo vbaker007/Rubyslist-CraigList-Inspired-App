@@ -12,4 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require jbar.colors
+ *= require jbar
  */
