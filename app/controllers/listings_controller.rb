@@ -25,6 +25,10 @@ class ListingsController < ApplicationController
     @listings = Listing.where(user: current_user)
   end
 
+  def edit
+    @listing = Listing.find(params[:id])
+  end
+  
   private
 
   def listing_params
