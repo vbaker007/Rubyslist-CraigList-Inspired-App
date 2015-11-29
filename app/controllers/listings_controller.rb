@@ -1,4 +1,5 @@
 class ListingsController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :create]
   def index
     @listings = Listing.all
   end
