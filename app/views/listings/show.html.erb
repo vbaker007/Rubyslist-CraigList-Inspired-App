@@ -1,9 +1,8 @@
 <div class="topbar">
   <div class="container">
     <div class="vertical-center">
-      <%= link_to 'rubyslist', root_path %> > jobs > accounting
+      <%= link_to 'rubyslist', root_path %> > <%= link_to @category.name, @category %> > <%= @subcategory.name %>
     </div>
-  </div>
 </div>
 <div class="container">
   <div>
