@@ -15,7 +15,7 @@ class ListingsController < ApplicationController
         @listing.user = current_user
         redirect_to @listing
     else
-        flash[:danger] = @listing.errors.full_messages.to_sentence
+        flash[:alert] = @listing.errors.full_messages.to_sentence
         render 'new'
     end
   end
