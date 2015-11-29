@@ -8,11 +8,9 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
-    if @listing.save
-      redirect_to @listing
-    else
-      render :new
-    end
+    @listing.user = current_user
+    @listing.save
+    redirect_to @listing
   end
 
   def search
@@ -24,8 +22,9 @@ class ListingsController < ApplicationController
   end
 
   def mylistings
+    @listings = Listing.where(user: current_user)
   end
-  
+
   private
 
   def listing_params
