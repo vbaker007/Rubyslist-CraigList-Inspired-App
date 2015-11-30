@@ -48,3 +48,10 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+  gem 'puma', '~> 2.15.3'
+  #gem 'pg', '~> 0.18.3'
+  
+end
+
