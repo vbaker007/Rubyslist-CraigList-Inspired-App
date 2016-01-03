@@ -172,7 +172,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.0)
   jquery-rails
-  pg
+  pg (~> 0.18.3)
   puma (~> 2.15.3)
   rails (= 4.2.4)
   rails_12factor
